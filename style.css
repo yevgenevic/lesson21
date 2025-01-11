@@ -8,14 +8,13 @@
 .navbar {
   position: fixed;
   width: 100%;
-  padding: 1rem;
+  /* padding: 1rem; */
   background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
 }
 
 .logo {
@@ -25,12 +24,13 @@
 .logo img {
   height: 40px;
   width: auto;
-  transition: all 0.3s ease;
+  vertical-align: middle;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
 
 .nav-buttons {
   display: flex;
@@ -56,7 +56,6 @@ html {
   font-size: 18px;
   transition: all 0.3s ease;
 }
-
 
 .hero {
   height: 100vh;
@@ -368,31 +367,6 @@ html {
   cursor: pointer;
 }
 
-@media (max-width: 1024px) {
-  .navbar {
-    padding: 0.8rem;
-  }
-
-  .logo img {
-    height: 35px;
-  }
-
-  .nav-buttons {
-    gap: 0.5rem;
-  }
-
-  .nav-button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  .booking {
-    padding: 8px;
-    font-size: 0.9rem;
-  }
-}
-
-/* Mobile screens */
 @media (max-width: 768px) {
   .services-grid,
   .pricing-grid,
@@ -409,51 +383,28 @@ html {
   .event-card:nth-child(even) {
     direction: ltr;
   }
-  .navbar {
-    padding: 0.5rem;
-  }
-
-  .logo img {
-    height: 30px;
-  }
 
   .nav-buttons {
-    gap: 0.3rem;
+    display: none;
   }
 
-  .nav-button {
-    padding: 0.3rem 0.5rem;
-    font-size: 0.8rem;
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .booking {
-    padding: 6px;
-    font-size: 0.8rem;
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
   }
-  
 }
 
-/* Small mobile screens */
 @media (max-width: 480px) {
-  .navbar {
-    padding: 0.4rem;
+  .community-grid {
+    grid-template-columns: 1fr;
   }
 
-  .logo img {
-    height: 25px;
-  }
-
-  .nav-buttons {
-    gap: 0.2rem;
-  }
-
-  .nav-button {
-    padding: 0.2rem 0.4rem;
-    font-size: 0.7rem;
-  }
-
-  .booking {
-    padding: 4px;
-    font-size: 0.7rem;
+  .footer-content {
+    grid-template-columns: 1fr;
   }
 }
